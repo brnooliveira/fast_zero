@@ -77,3 +77,16 @@ def test_update_user_caindo_na_exception(client):
     )
 
     assert response.status_code == HTTPStatus.NOT_FOUND
+
+
+def test_delete_user(client):
+    response = client.delete('/users/1')
+
+    assert response.status_code == HTTPStatus.OK
+    assert response.json() == {'message': 'User deleted'}
+
+
+def test_delete_user_caindo_na_exception(client):
+    response = client.delete('/users/11231232131')
+
+    assert response.status_code == HTTPStatus.NOT_FOUND
