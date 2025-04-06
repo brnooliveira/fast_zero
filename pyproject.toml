@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"
-fastapi = {extras = ["standard"], version = "^0.115.11"}
+fastapi = { extras = ["standard"], version = "^0.115.11" }
 
 
 [tool.poetry.group.dev.dependencies]
@@ -15,7 +15,7 @@ pytest = "^8.3.5"
 pytest-cov = "^6.0.0"
 taskipy = "^1.14.1"
 ruff = "^0.9.9"
-                                                                                                                                                                                                                                                                    
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
